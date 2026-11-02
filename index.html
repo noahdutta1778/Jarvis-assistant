@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#020912">
+<title>JARVIS</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Rajdhani:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-state="idle">
+<main class="app">
+  <header class="top">
+    <h1>J.A.R.V.I.S</h1>
+    <div class="lang" role="group" aria-label="Language">
+      <button type="button" data-lang="en" class="on">English</button>
+      <button type="button" data-lang="hi">हिन्दी</button>
+      <button type="button" data-lang="as">অসমীয়া</button>
+    </div>
+  </header>
+
+  <section class="stats" aria-label="System status">
+    <div><b id="clock">--:--</b><small id="date">Time</small></div>
+    <div><b id="battery">--</b><small>Power</small></div>
+    <div><b id="net">--</b><small>Network</small></div>
+  </section>
+
+  <section class="core">
+    <button type="button" id="mic" class="reactor" aria-label="Tap to speak">
+      <i class="r r1"></i><i class="r r2"></i><i class="r r3"></i><i class="heart"></i>
+    </button>
+    <p id="status" aria-live="polite">Standing by</p>
+  </section>
+
+  <section id="log" class="log" aria-live="polite"></section>
+
+  <form id="form" class="bar" autocomplete="off">
+    <input id="text" type="text" placeholder="Type a command" aria-label="Type a command" enterkeyhint="send">
+    <button type="submit">Send</button>
+  </form>
+
+  <details class="voice">
+    <summary>Voice settings</summary>
+    <div class="row">
+      <select id="voice" aria-label="Voice"></select>
+      <button type="button" id="test">Test voice</button>
+    </div>
+  </details>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
